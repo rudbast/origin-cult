@@ -3,3 +3,22 @@ body {
     background: rgb(66, 66, 66);
     padding-top: 30px;
 }
+
+.nav li a {
+    background: #000000;
+    color: #ffffff;
+}
+
+.nav li a:hover {
+    color: #000000;
+}
+
+.btn {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background: grey;
+    color: #ffffff;
+}
