@@ -22,6 +22,10 @@ header {
     color: rgb(255, 255, 255);
 }
 
+#responsive-headline {
+    font: 45px/0.8 "Impact";
+}
+
 .content {
     padding-top: 20px;
 }

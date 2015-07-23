@@ -8,35 +8,12 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/loginstyle.css">
-
-    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/js/jquery.fittext.js" type="text/javascript"></script>
-    <script>
-    $(function() {
-        $('#login-form-link').click(function(e) {
-            $('#login-form').delay(100).fadeIn(100);
-            $('#register-form').fadeOut(100);
-            $('#register-form-link').removeClass('active');
-            $(this).addClass('active');
-            // e.preventDefault();
-        });
-        $('#register-form-link').click(function(e) {
-            $('#register-form').delay(100).fadeIn(100);
-            $('#login-form').fadeOut(100);
-            $('#login-form-link').removeClass('active');
-            $(this).addClass('active');
-            // e.preventDefault();
-        });
-    });
-    $("#responsive-headline").fitText();
-    </script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <header class="col-md-12 text-center">
-                <h1 id="responsive-headline">Welcome to Trivel <small>Join us and share your wonderful culture</h1>
+                <h1 id="responsive-headline">Welcome to Trivel <br /><small>Join us and share your wonderful culture</h1>
             </header>
 
             <div class="content col-md-6 col-md-offset-3">
@@ -112,5 +89,28 @@
             Copyright &copy Trivel Group
         </footer>
     </div><!-- /.container -->
+
+    <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/js/jquery.fittext.js" type="text/javascript"></script>
+    <script>
+    $(function() {
+        $('#login-form-link').click(function(e) {
+            $('#login-form').delay(100).fadeIn(100);
+            $('#register-form').fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $(this).addClass('active');
+            // e.preventDefault();
+        });
+        $('#register-form-link').click(function(e) {
+            $('#register-form').delay(100).fadeIn(100);
+            $('#login-form').fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $(this).addClass('active');
+            // e.preventDefault();
+        });
+    });
+    $("#responsive-headline").fitText(1.2);
+    </script>
 </body>
 </html>
