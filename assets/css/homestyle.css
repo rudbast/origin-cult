@@ -22,7 +22,7 @@ header {
     padding: 20px 10px 0px 10px;
     background: #000000; }
     header .top-part #nav-top {
-      padding-left: 30px; }
+      padding: 10px 0px 0px 30px; }
       header .top-part #nav-top li {
         display: inline; }
         header .top-part #nav-top li a {
@@ -58,17 +58,33 @@ header {
       background: #000000;
       color: #FFFFFF; }
 
-.active {
-  background: #000000;
-  color: #FFFFFF; }
-
 #content {
-  padding-top: 130px;
-  height: 1000px; }
+  padding-top: 140px;
+  height: 100%; }
   #content .sidebar {
     position: fixed;
     margin-right: 10%;
     padding: 10px 10px 10px 10px;
     text-align: justify; }
+  #content .panel-heading {
+    font-family: "Courier New", monospace; }
+
+#posthere {
+  padding: 15px; }
+
+.notif-badge[data-badge]:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: .7em;
+  background: green;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333; }
 
 /*# sourceMappingURL=homestyle.css.map */
