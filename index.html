@@ -4,40 +4,59 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Template Page</title>
+    <title>Blankrack | Home</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/mystyle.css">
+
+    <link rel="stylesheet" href="assets/css/homestyle.css">
 
     <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#nav-top li a").click(function() {
+                $("#nav-top li a").each(function() {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+            });
+
+            $("#nav-mid li a").click(function() {
+                $("#nav-mid li a").each(function() {
+                    $(this).removeClass("active");
+                });
+                $(this).addClass("active");
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-coll-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <img class="navbar-brand" src="assets/img/brand.ico" alt="TRIVEL">
-                        <a href="#" class="navbar-brand">Trivel</a>
-                    </div><!-- /.navbar-header -->
+        <div class="row navbar-fixed-top">
+            <header>
+                <nav class="top-part row">
+                    <p>Blankrack</p>
+                    <ul id="nav-top">
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Setting</a></li>
+                    </ul>
+                </nav>
 
-                    <div class="collapse navbar-collapse" id="navbar-coll-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#" title="home">Home</a></li>
-                            <li><a href="#" title="profile">Profile</a></li>
-                            <li><a href="#" title="help">Help</a></li>
+                <nav class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-4 col-md-4">
+                        <ul id="nav-mid" class="nav nav-pills nav-justified">
+                            <li><a class="active" href="#">All</a></li>
+                            <li><a href="#">Accommodation</a></li>
+                            <li><a href="#">Culinary</a></li>
+                            <li><a href="#">Culture</a></li>
+                            <li><a href="#">Tourism</a></li>
                         </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div>
-            </nav>
-        </header>
+                    </div>
+                </nav>
+            </header>
+        </div>
 
         <div id="content">
             <article class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -48,10 +67,9 @@
                 </div>
             </article>
 
-            <aside class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="sidebar">
-                    <h2>Sidebar</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
+            <aside class="col-md-4 col-lg-4" style="display: block;">
+                <div class="sidebar panel panel-default">
+                    <p><strong>Ads</strong><br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </aside>
         </div><!-- /#content -->
