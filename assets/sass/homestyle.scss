@@ -14,10 +14,6 @@ body {
     width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
 header {
     width: 100%;
 
@@ -59,27 +55,36 @@ header {
         }
     }
 
-    #nav-mid {
-        li {
-            background: $white;
+    .bot-part {
+        padding-top: 9px;
+        background: transparentize($white, 1);
 
-            a {
-                text-decoration: none;
-                text-transform: uppercase;
-                font-size: 15px;
-                font-family: "Impact", sans-serif;
-                border-radius: 0px;
-                color: $black;
-            }
+        #nav-mid {
+            font-size: 0px;
 
-            .active {
-                background: $black;
-                color: $white;
-            }
+            li {
+                display: inline;
 
-            :hover {
-                background: $black;
-                color: $white;
+                a {
+                    padding: 10px 20px 10px 20px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    font-family: "Impact", sans-serif;
+                    border: 1px solid $black;
+                    background: $white;
+                    color: $black;
+                }
+
+                .active {
+                    background: $black;
+                    color: $white;
+                }
+
+                :hover {
+                    background: $black;
+                    color: $white;
+                }
             }
         }
     }
@@ -102,7 +107,7 @@ header {
 }
 
 #posthere {
-    padding: 15px;
+    padding: 10px 20px 10px 20px;
 }
 
 .notif-badge[data-badge]:after {
