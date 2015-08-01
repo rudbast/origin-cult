@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="home">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,8 @@
     <script src="assets/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 
+    <script src="assets/js/angular.min.js" charset="utf-8"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
     <script src="assets/js/main.js" type="text/javascript"></script>
 </head>
 <body>
@@ -42,25 +44,23 @@
                     </div>
                 </nav><!-- /.top-part -->
 
-                <nav class="bot-part row">
+                <nav class="bot-part row" ng-controller="CategoryController as scope">
                     <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-6">
                         <ul id="nav-mid" class="text-center">
-                            <li><a class="active" href="#">All</a></li>
-                            <li><a href="#">Accommodation</a></li>
-                            <li><a href="#">Culinary</a></li>
-                            <li><a href="#">Culture</a></li>
-                            <li><a href="#">Tourism</a></li>
+                            <li ng-repeat="category in scope.categories">
+                                <a href="#" ng-click="scope.select($index)" ng-class="{active: $index == scope.selected}">{{ category }}</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </header>
-        </div>
+        </div><!-- /.navbar-fixed-top -->
 
         <div id="content">
             <article class="col-md-8 col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
-                        post your journey here
+                        <input type="button" name="post" value="post your journey here" class="toggle btn btn-default">
                     </div>
 
                     <div id="posthere">
@@ -80,6 +80,43 @@
                 </div>
             </aside>
         </div><!-- /#content -->
-    </div>
+
+        <div id="overlay">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        Post your fantastic journey right away!
+                    </div>
+
+                    <div id="writepost">
+                        <form class="post" action="#" method="post">
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <select class="form-control" multiple>
+                                    <option value="">Accommodation</option>
+                                    <option value="">Culinary</option>
+                                    <option value="">Culture</option>
+                                    <option value="">Tourism</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" rows="5" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="">How to reach</label>
+                                <textarea name="howtoreach" id="" rows="5" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control btn btn-default" type="submit" name="submit" value="Share to">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer text-center">thank you</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+
 </body>
 </html>
