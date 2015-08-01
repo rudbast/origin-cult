@@ -104,3 +104,12 @@ header {
     margin-top: 20px; }
   #overlay .panel-heading, #overlay .panel-footer {
     font-family: "Courier New", monospace; }
+
+#toggle-post {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: 1px 1px grey; }
+
+#toggle-post:hover {
+  color: #FFFFFF; }

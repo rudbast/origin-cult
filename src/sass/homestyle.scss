@@ -144,3 +144,14 @@ header {
         font-family: "Courier New", monospace;
     }
 }
+
+#toggle-post {
+    text-decoration: none;
+    color: $black;
+    font-weight: bold;
+    text-shadow: 1px 1px grey;
+}
+
+#toggle-post:hover {
+    color: $white;
+}
