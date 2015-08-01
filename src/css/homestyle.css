@@ -34,7 +34,8 @@ header {
           font-weight: bold; }
         header .top-part #nav-top li :hover {
           color: #6EB0DE; }
-    header .top-part p {
+    header .top-part p > a {
+      text-decoration: none;
       padding-left: 40px;
       color: #FFFFFF;
       font-family: 'Courier New', monospace;
@@ -104,6 +105,8 @@ header {
     margin-top: 20px; }
   #overlay .panel-heading, #overlay .panel-footer {
     font-family: "Courier New", monospace; }
+  #overlay textarea {
+    resize: none; }
 
 #toggle-post {
   text-decoration: none;

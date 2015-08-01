@@ -47,7 +47,8 @@ header {
             }
         }
 
-        p {
+        p > a {
+            text-decoration: none;
             padding-left: 40px;
             color: $white;
             font-family: 'Courier New', monospace;
@@ -142,6 +143,10 @@ header {
 
     .panel-heading, .panel-footer {
         font-family: "Courier New", monospace;
+    }
+
+    textarea {
+        resize: none;
     }
 }
 
