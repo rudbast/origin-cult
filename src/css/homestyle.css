@@ -11,7 +11,8 @@ body {
   line-height: 20px; }
 
 .container {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 header {
   width: 100%; }
@@ -73,7 +74,7 @@ header {
   #content .panel-heading {
     font-family: "Courier New", monospace; }
 
-#posthere {
+#posthere, #writepost {
   padding: 10px 20px 10px 20px; }
 
 .notif-badge[data-badge]:after {
@@ -88,3 +89,18 @@ header {
   text-align: center;
   line-height: 18px;
   box-shadow: 0 0 1px #333; }
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  color: #000000;
+  display: none; }
+  #overlay .panel {
+    margin-top: 20px; }
+  #overlay .panel-heading, #overlay .panel-footer {
+    font-family: "Courier New", monospace; }

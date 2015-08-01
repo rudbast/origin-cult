@@ -43,7 +43,7 @@ gulp.task('miny-html', function () {
 
     gulp.src(htmlSrc)
         .pipe(changed(htmlDst))
-        .pipe(minifyHTML())
+        // .pipe(minifyHTML())
         .pipe(gulp.dest(htmlDst));
 });
 
@@ -53,7 +53,7 @@ gulp.task('scripts', function () {
         jsDst = dst + '/js';
 
     gulp.src(jsSrc)
-        .pipe(concat('main.js'))
+        // .pipe(concat('main.js'))
         .pipe(stripDebug())
         .pipe(uglify())
         .pipe(gulp.dest(jsDst));

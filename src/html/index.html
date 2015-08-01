@@ -60,7 +60,7 @@
             <article class="col-md-8 col-lg-8">
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
-                        <input type="button" name="post" value="post your journey here" class="toggle btn btn-default">
+                        <button id="toggle-post" type="button" name="post" class="btn btn-default">post your journey here</button>
                     </div>
 
                     <div id="posthere">
@@ -86,10 +86,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
                         Post your fantastic journey right away!
+                        <button id="close-post" type="button" name="close">x</button>
                     </div>
 
                     <div id="writepost">
-                        <form class="post" action="#" method="post">
+                        <form class="post" action="" method="post">
                             <div class="form-group">
                                 <label for="category">Category</label>
                                 <select class="form-control" multiple>

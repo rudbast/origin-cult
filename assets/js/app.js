@@ -1,0 +1,1 @@
+!function(){var e=angular.module("home",[]);e.controller("CategoryController",function(){var e=["All","Accommodation","Culinary","Culture","Tourism"];this.categories=e,this.selected=0,this.select=function(e){this.selected=e}})}();
