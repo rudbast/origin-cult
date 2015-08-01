@@ -95,7 +95,7 @@ gulp.task('default', [
     'styles',
 ], function () {
     // watch HTML changes
-    gulp.watch(src + '/hmtl/*.html', ['miny-html']);
+    gulp.watch(src + '/html/*.html', ['miny-html']);
 
     // watch JS changes
     gulp.watch(src + '/js/*.js', ['lint', 'scripts']);

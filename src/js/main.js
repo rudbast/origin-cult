@@ -13,6 +13,7 @@ $(function() {
     //     $(this).addClass("active");
     // });
 
+    // TODO: review toggle style, smoothing animation
     $("#toggle-post").click(function(event) {
         event.preventDefault();
         $('#overlay').css('display', 'block').fadeIn(500);
