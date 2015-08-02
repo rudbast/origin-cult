@@ -39,11 +39,11 @@ gulp.task('miny-img', function () {
 // minify HTML pages
 gulp.task('miny-html', function () {
     var htmlSrc = src + '/html/*.html',
-        htmlDst = './';
+        htmlDst = '.';
 
     gulp.src(htmlSrc)
         .pipe(changed(htmlDst))
-        // .pipe(minifyHTML())
+        .pipe(minifyHTML())
         .pipe(gulp.dest(htmlDst));
 });
 
@@ -78,11 +78,6 @@ gulp.task('sass', function () {
     gulp.src(sassSrc)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(sassDst));
-});
-
-// watch SASS changes
-gulp.task('sass:watch', function () {
-    gulp.watch(src + '/sass/*.scss', ['sass']);
 });
 
 // default task

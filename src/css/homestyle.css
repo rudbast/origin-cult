@@ -11,8 +11,8 @@ body {
   line-height: 20px; }
 
 .container {
-  width: 100%;
-  position: relative; }
+  height: 100%;
+  width: 100%; }
 
 header {
   width: 100%; }
@@ -116,3 +116,8 @@ header {
 
 #toggle-post:hover {
   color: #FFFFFF; }
+
+#close-post {
+  position: absolute;
+  right: 35px;
+  padding: 4px 4px 0px 4px; }

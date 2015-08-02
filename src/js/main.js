@@ -16,12 +16,14 @@ $(function() {
     // TODO: review toggle style, smoothing animation
     $("#toggle-post").click(function(event) {
         event.preventDefault();
-        $('#overlay').css('display', 'block').fadeIn(500);
+        $('#overlay').css('display', 'block');
+        $('body').css('overflow', 'hidden');
     });
 
     $("#close-post").click(function(event) {
         event.preventDefault();
-        $('#overlay').css('display', 'none').fadeOut(500);
+        $('#overlay').css('display', 'none');
+        $('body').css('overflow', '');
     });
 });
 

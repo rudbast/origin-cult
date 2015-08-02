@@ -11,8 +11,8 @@ body {
 }
 
 .container {
+    height: 100%;
     width: 100%;
-    position: relative;
 }
 
 header {
@@ -44,6 +44,12 @@ header {
                 :hover {
                     color: $blue;
                 }
+            }
+        }
+
+        #corner-form {
+            .form-control {
+                // padding: 0px;
             }
         }
 
@@ -159,4 +165,10 @@ header {
 
 #toggle-post:hover {
     color: $white;
+}
+
+#close-post {
+    position: absolute;
+    right: 35px;
+    padding: 4px 4px 0px 4px;
 }
